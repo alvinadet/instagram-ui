@@ -33,7 +33,7 @@ class TabBar extends Component {
             <Badge>
               <Text>51</Text>
             </Badge>
-            <Icon name="add" />
+            <Icon name="heart" />
           </Button>
           <Button vertical>
             <Icon name="person" />

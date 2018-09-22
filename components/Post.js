@@ -18,21 +18,25 @@ export default class CardImageExample extends Component {
   state = {
     data: [
       {
+        id: 1,
         nama: 'alvin',
         image:
           'https://www.wandarafania.com/wp-content/uploads/2018/01/Ragam-Manfaat-Buah-Salak-Serta-Kandungan-Gizinya.jpg'
       },
       {
+        id: 2,
         nama: 'sodo',
         image:
           'https://www.sunpride.co.id/wp-content/uploads/2018/04/rom_32901.jpg'
       },
       {
+        id: 3,
         nama: 'anggih',
         image:
           'https://cdns.klimg.com/vemale.com/headline/650x325/2018/09/4-alasan-kenapa-sebaiknya-kamu-konsumsi-buah-pisang-setiap-hari.jpg'
       },
       {
+        id: 4,
         nama: 'sodo',
         image:
           'https://www.sunpride.co.id/wp-content/uploads/2018/04/rom_32901.jpg'
@@ -40,9 +44,10 @@ export default class CardImageExample extends Component {
     ]
   };
   render() {
-    return this.state.data.map((datum, key) => {
+    return this.state.data.map((datum, id) => {
       return (
-        <Card>
+        
+        <Card key={id}>
           <CardItem>
             <Left>
               <Thumbnail source={{ uri: 'Image URL' }} />
@@ -61,21 +66,25 @@ export default class CardImageExample extends Component {
           <CardItem>
             <Left>
               <Button transparent>
-                <Icon active name="thumbs-up" />
-                <Text>12 Likes</Text>
+                <Icon  name="heart" />
+              </Button>
+              <Button transparent>
+                <Icon  type="FontAwesome" name="comment" />
               </Button>
             </Left>
-            <Body>
-              <Button transparent>
-                <Icon active name="chatbubbles" />
-                <Text>4 Comments</Text>
-              </Button>
-            </Body>
             <Right>
-              <Text>11h ago</Text>
+              <Button transparent>
+                <Icon active name="bookmarks" />
+              </Button>
             </Right>
           </CardItem>
+          <CardItem>
+          <Body>
+            <Text>lorem ipsum  </Text>
+          </Body>
+          </CardItem>
         </Card>
+        
       );
     });
   }

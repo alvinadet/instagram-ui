@@ -6,8 +6,11 @@ import {
   Body,
   Right,
   Title,
-  connectStyle
+  connectStyle,
+  Button,
+  Icon
 } from 'native-base';
+import { black } from 'ansi-colors';
 class HeaderTitle extends Component {
   render() {
     const styles = this.props.style;
@@ -17,7 +20,11 @@ class HeaderTitle extends Component {
         <Body>
           <Title style={styles.textContent}>InstantGram</Title>
         </Body>
-        <Right />
+        <Right>
+        <Button transparent>
+            <Icon style={{color: black}} type="FontAwesome" name="send" />
+        </Button>
+        </Right>
       </Header>
     );
   }
