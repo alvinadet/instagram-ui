@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Font, AppLoading } from 'expo';
 import { Root } from 'native-base';
-import { Home } from './page';
-
-export default class App extends Component {
+import { Layout } from "./router";
+class App extends Component {
   state = {
     loading: true
   };
@@ -22,6 +21,7 @@ export default class App extends Component {
         </Root>
       );
     }
-    return <Home />;
+  return <Layout />
   }
 }
+export default App

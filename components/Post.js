@@ -44,13 +44,13 @@ export default class CardImageExample extends Component {
     ]
   };
   render() {
-    return this.state.data.map((datum, id) => {
+    return this.state.data.map((datum, key) => {
       return (
         
-        <Card key={id}>
+        <Card key={key.toString()}>
           <CardItem>
             <Left>
-              <Thumbnail source={{ uri: 'Image URL' }} />
+              <Thumbnail source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png' }} />
               <Body>
                 <Text>{datum.nama}</Text>
                 <Text note>GeekyAnts</Text>
